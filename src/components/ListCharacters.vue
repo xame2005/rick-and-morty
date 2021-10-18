@@ -43,8 +43,16 @@ export default {
 <style lang="scss">
 .characters {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 3rem;
   margin: 3rem 0;
+}
+@media (min-width: 768px) {
+  .characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin: 3rem 0;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="character">
     <img :src="character.image" :alt="character.name" />
-    <div class="character-info">
+    <div class="character__info">
       <h3>{{ character.name }}</h3>
       <div class="status">
         <span
@@ -12,15 +12,20 @@
               ? 'dead'
               : 'default'
           "
-          >{{ character.status }}</span
-        >
-        <span> - {{ character.species }} </span>
+        ></span>
+        <span>{{ character.status }} - {{ character.species }}</span>
       </div>
-      <div class="origin">
-        <span>Origin: {{ character.origin.name }} </span>
+      <div class="origen">
+        <span>
+          Origin:
+          {{ character.origin.name }}
+        </span>
       </div>
       <div class="location">
-        <span>Location: {{ character.location.name }}</span>
+        <span>
+          Location:
+          {{ character.location.name }}
+        </span>
       </div>
     </div>
   </div>
@@ -35,6 +40,7 @@ export default {
 .character {
   background-color: var(--background-card);
   border-radius: 20px;
+  border: 1px solid white;
   box-shadow: 0 0 10px 1px var(--background-body);
   overflow: hidden;
   cursor: pointer;
@@ -42,6 +48,7 @@ export default {
   height: 100%;
   &:hover {
     transform: scale(1.05);
+    border: 1px solid var(--text-orange);
     h3 {
       color: var(--text-orange);
     }
